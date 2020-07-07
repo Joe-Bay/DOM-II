@@ -10,7 +10,7 @@ const body = document.querySelector('body');
  const headImg = document.querySelector('header img');
 
 
-// const welcomeTitle = document.querySelector('.container h2');
+ const welcomeTitle = document.querySelector('.container h2');
 
 
 logoColor.addEventListener('click', () =>{ 
@@ -29,6 +29,9 @@ navLinks.forEach(function(){ // makes the nav links increase in size and return 
             navLinks[i].style.fontSize = '1.6rem';
             navLinks[i].style.transition = '0.5s'
 })
+        navLinks[i].addEventListener('click', () => {
+            navLinks[i].preventDefault;
+        })
 }
 })
 
@@ -68,3 +71,7 @@ headImg.addEventListener('wheel', () =>{
     headImg.style.height = '40vh';
 })
 
+welcomeTitle.addEventListener('dblclick', (event) =>{
+    event.stopPropagation(); // used stop propogation to make it not trigger the body double click effect
+    welcomeTitle.style.color = 'green';
+})
