@@ -3,8 +3,12 @@ let logoColor = document.querySelector('.logo-heading');
 
 const navLinks = document.querySelectorAll('.nav-link');
 
+const body = document.querySelector('body');
+
+// const firstImage = document.querySelector('.img-content');
 
 
+// const welcomeTitle = document.querySelector('.container h2');
 
 
 logoColor.addEventListener('click', () =>{ 
@@ -26,3 +30,19 @@ navLinks.forEach(function(){ // makes the nav links increase in size and return 
 }
 })
 
+body.addEventListener('dblclick', () => {
+    body.style.background = 'pink';
+})
+
+logoColor.addEventListener('contextmenu', (event) => { // prevents you from right clicking the logo
+    event.preventDefault();
+})
+
+window.addEventListener('load', () =>{
+    alert('The Page is fully loaded for you sir');
+})
+
+window.addEventListener('keydown', () => {
+    body.style.fontWeight = '700';
+})
+ 
